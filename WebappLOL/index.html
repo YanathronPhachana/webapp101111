@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แนะนำตัว - ทาม</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+        
+        .container {
+            position: relative;
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 60px 80px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 600px;
+            animation: fadeInUp 0.8s ease;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        h1 {
+            color: #2c5f2d;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .info {
+            text-align: left;
+            margin: 0 auto;
+            max-width: 400px;
+        }
+        
+        .info-item {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 30px;
+            margin: 20px 0;
+            border-radius: 15px;
+            font-size: 1.3em;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: slideIn 0.6s ease;
+            animation-fill-mode: both;
+        }
+        
+        .info-item:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+        
+        .info-item:nth-child(2) {
+            animation-delay: 0.4s;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .info-item:nth-child(3) {
+            animation-delay: 0.6s;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .info-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .label {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 30px;
+                margin: 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            .info-item {
+                font-size: 1.1em;
+                padding: 15px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlay"></div>
+    <div class="container">
+        <h1>👋 แนะนำตัว</h1>
+        <div class="info">
+            <div class="info-item">
+                <span class="label">ชื่อ:</span>ญาณาธร ภาชนะ
+            </div>
+            <div class="info-item">
+                <span class="label">ชื่อเล่น:</span>ทาม
+            </div>
+            <div class="info-item">
+                <span class="label">เลขนิสิต:</span>67020870
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
